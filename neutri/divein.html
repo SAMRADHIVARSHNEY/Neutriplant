@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Get Started!</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d1e8d1;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+        }
+
+        .logo img {
+            width: 70px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #558b2f;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 15px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .social-buttons button {
+            background-color: #f0f4f0;
+            color: #333;
+            box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-buttons button i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .primary-button {
+            background-color: #558b2f;
+            color: #ffffff;
+        }
+
+        .primary-button:hover {
+            background-color: #33691e;
+        }
+
+        .secondary-button {
+            background-color: #aed581;
+            color: #33691e;
+        }
+
+        .secondary-button:hover {
+            background-color: #81c784;
+        }
+
+        .footer {
+            margin-top: 20px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #558b2f;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/63/63407.png" alt="Logo">
+        </div>
+        <h1>Let's Get Started!</h1>
+        <p>Let's dive into your account</p>
+        <div class="social-buttons">
+            <button id="google-btn"><i class="fab fa-google"></i>Continue with Google</button>
+            <button id="apple-btn"><i class="fab fa-apple"></i>Continue with Apple</button>
+            <button id="facebook-btn"><i class="fab fa-facebook"></i>Continue with Facebook</button>
+            <button id="twitter-btn"><i class="fab fa-twitter"></i>Continue with Twitter</button>
+        </div>
+        <button class="primary-button" id="signup-btn">Sign up</button>
+        <button class="secondary-button" id="login-btn">Log in</button>
+        <div class="footer">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signup-btn').addEventListener('click', function() {
+            window.location.href = 'signup.html';
+        });
+
+        document.getElementById('login-btn').addEventListener('click', function() {
+            window.location.href = 'signin.html';
+        });
+
+        document.getElementById('google-btn').addEventListener('click', function() {
+            window.location.href = "https://accounts.google.com/";
+        });
+
+        document.getElementById('apple-btn').addEventListener('click', function() {
+            window.location.href = "https://appleid.apple.com/";
+        });
+
+        document.getElementById('facebook-btn').addEventListener('click', function() {
+            window.location.href = "https://www.facebook.com/login/";
+        });
+
+        document.getElementById('twitter-btn').addEventListener('click', function() {
+            window.location.href = "https://twitter.com/login";
+        });
+    </script>
+</body>
+</html>

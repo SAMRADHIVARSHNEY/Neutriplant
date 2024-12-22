@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Information</title>
+    <style>
+        /* General Reset */
+        body, h2, ul, li {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTEyL3Jhd3BpeGVsX29mZmljZV80MF9hX21pbmltYWxzbV9pbGx1c3RyYXRpb25fb2Zfc2FnZV9ncmVlbl9sb2ZpX18zMDk0YTgwYi04ZDVhLTQxZGYtYWUxZi1jY2MwMmExZjgyMWYuanBn.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Image Styling */
+        .header-image {
+            width: 100%;
+            max-width: 500px;
+            height: 500px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(58, 58, 58, 0.8); /* Semi-transparent dark grey */
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            text-align: left;
+        }
+
+        /* Section Styling */
+        .plant-info {
+            margin-bottom: 40px;
+        }
+
+        .plant-info h2 {
+            font-size: 2.5em;
+            color: #81c784; /* Light green color for headings */
+            margin-bottom: 15px;
+            border-bottom: 3px solid #81c784;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .plant-info h3 {
+            font-size: 1.8em;
+            color: #aed581; /* Slightly lighter green for subheadings */
+            margin-bottom: 10px;
+            border-bottom: 2px solid #aed581;
+            display: inline-block;
+            padding-bottom: 3px;
+        }
+
+        .plant-info ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .plant-info ul li {
+            font-size: 1.2em;
+            color: #d0d0d0; /* Light grey color for text */
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .plant-info ul li::before {
+            content: '•';
+            color: #81c784;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.5em;
+        }
+
+        /* Hover Effects */
+        .plant-info ul li:hover {
+            color: #81c784;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .plant-info h2 {
+                font-size: 2em;
+            }
+
+            .plant-info ul li {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Image -->
+    <img src="https://cdn.mos.cms.futurecdn.net/PmnbHMeekAxBFcT4Jk62iJ.jpg" alt="Plant Image" class="header-image">
+    
+    <div class="container">
+        <section class="plant-info">
+            <h2>Succulents</h2> <br>
+            <h3>Advantages in Our Environment:</h3>
+            <ul>
+                <li>Water Conservation: Store water in leaves; highly drought-resistant.</li>
+                <li>Low Maintenance: Thrive in well-drained soil; minimal watering needed.</li>
+                <li>Erosion Control: Roots help stabilize soil; reduce erosion.</li>
+            </ul>
+
+            <h3>Common Diseases:</h3>
+            <ul>
+                <li>Root Rot: Caused by overwatering; leads to decaying roots.</li>
+                <li>Powdery Mildew: White, powdery fungus on leaves; affects plant health.</li>
+            </ul>
+
+            <h3>Cures for Diseases:</h3>
+            <ul>
+                <li>Root Rot: Use well-drained soil; water sparingly; remove rotted parts.</li>
+                <li>Powdery Mildew: Improve air circulation; avoid overhead watering; use fungicides if needed.</li>
+            </ul>
+        </section>
+
+        <section class="plant-info">
+            <h2>Cacti</h2> <br>
+            <h3>Advantages in Our Environment:</h3>
+            <ul>
+                <li>Survival in Extreme Conditions: Store water in stems; endure long droughts.</li>
+                <li>Sunlight Utilization: Thrive in intense sunlight; perfect for hot areas.</li>
+                <li>Low Water Use: Require very little water; support conservation.</li>
+            </ul>
+
+            <h3>Common Diseases:</h3>
+            <ul>
+                <li>Mealybugs: Pests that leave cotton-like residue; weaken the plant.</li>
+                <li>Bacterial Soft Rot: Soft, mushy spots from overwatering; can lead to rot.</li>
+            </ul>
+
+            <h3>Cures for Diseases:</h3>
+            <ul>
+                <li>Mealybugs: Use insecticidal soap or neem oil; manually remove pests.</li>
+                <li>Bacterial Soft Rot: Increase airflow; reduce watering; cut out affected areas.</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

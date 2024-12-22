@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutri Plant - Leaf Detection</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(214, 239, 216); /* Light Green Background */
+            color: #333;
+        }
+
+        header {
+            background-color: #508D4E; /* Darker Green */
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            height: 60px;
+        }
+
+        nav {
+            flex: 1;
+        }
+
+        nav .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav .nav-links li {
+            display: inline;
+        }
+
+        nav .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav .nav-links a:hover {
+            color: #80AF81; /* Lighter Green */
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .auth-buttons a {
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            background-color: #1A5319; /* Dark Green */
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .auth-buttons a:hover {
+            background-color: #508D4E; /* Darker Green */
+            transform: translateY(-2px);
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .home-section {
+            text-align: center;
+            padding: 80px 20px;
+            background: url('path/to/leaf-background.jpg') no-repeat center center/cover;
+            color: white;
+            border-radius: 10px;
+            background-color: #80AF81; /* Lighter Green */
+            margin-top: 20px; /* Added space between the logo and home section */
+        }
+
+        .home-section h1 {
+            font-size: 54px;
+            margin-bottom: 20px;
+        }
+
+        .home-section p {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .upload-container {
+            display: inline-block;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .upload-container input {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #upload-button {
+            padding: 12px 24px;
+            background-color: #508D4E; /* Darker Green */
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        #upload-button:hover {
+            background-color: #1A5319; /* Dark Green */
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #508D4E; /* Darker Green */
+        }
+
+        .about-section {
+            background-color: #D6EFD8; /* Light Green Background */
+            padding: 50px 20px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .text-container {
+            flex: 1;
+            max-width: 50%;
+            text-align: left;
+            padding-right: 20px;
+        }
+
+        .image-container {
+            flex: 1;
+            max-width: 50%;
+            text-align: right;
+        }
+
+        .about-image {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .features-section, .how-it-works-section, .contact-section {
+            padding: 20px 20px;
+            background: rgb(255, 255, 255);
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #508D4E; /* Darker Green */
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .features-section ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .features-section ul li {
+            font-size: 18px;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f5f3;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .how-it-works-section {
+            background-color: #f9f9f9;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            flex: 1;
+            max-width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .step img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .step p {
+            font-size: 16px;
+        }
+
+        .testimonial-section {
+            padding: 60px 20px;
+            background: #D6EFD8; /* Light Green Background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .testimonials {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .testimonial {
+            flex: 1;
+            max-width: 300px;
+            margin: 20px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .testimonial img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .testimonial p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .explore-plants {
+            margin-bottom: 20px;
+        }
+
+        .plant-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .category {
+            text-align: center;
+        }
+
+        .category img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #1A5319; /* Dark Green */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .features-section ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .steps {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .testimonials {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="image5.png" alt="Nutri Plant Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="#login">Login</a>
+            <a href="#signup">Sign Up</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="home-section" id="home">
+            <h1>Welcome to Nutri Plant</h1>
+            <p>Discover how our advanced leaf detection technology helps you identify plant health and nutrients.</p>
+            <div class="upload-container">
+                <input type="file" id="file-upload" accept="image/*">
+                <button id="upload-button">Upload Leaf Image</button>
+                <div class="result" id="result"></div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="text-container">
+                    <h2>About Us</h2>
+                    <p>Nutri Plant is dedicated to advancing agricultural technology through precise leaf detection and analysis. Our mission is to provide accurate insights into plant health to help farmers and gardeners make informed decisions.</p>
+                </div>
+                <div class="image-container">
+                    <img src="about-image.jpg" alt="About Us" class="about-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section" id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Advanced Leaf Detection Technology</li>
+                <li>Real-Time Health Analysis</li>
+                <li>Detailed Nutrient Information</li>
+                <li>Easy-to-Use Interface</li>
+            </ul>
+        </section>
+
+        <section class="how-it-works-section" id="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <img src="step1-icon.png" alt="Step 1">
+                    <p>Upload a clear image of a leaf.</p>
+                </div>
+                <div class="step">
+                    <img src="step2-icon.png" alt="Step 2">
+                    <p>Our system analyzes the leaf.</p>
+                </div>
+                <div class="step">
+                    <img src="step3-icon.png" alt="Step 3">
+                    <p>Receive detailed health and nutrient insights.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section" id="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <img src="user1.jpg" alt="User 1">
+                    <p>"Nutri Plant has revolutionized my gardening practices. The insights are incredibly useful!"</p>
+                    <p>- Alex R.</p>
+                </div>
+                <div class="testimonial">
+                    <img src="user2.jpg" alt="User 2">
+                    <p>"The real-time analysis feature is a game-changer for farmers. Highly recommend!"</p>
+                    <p>- Jamie L.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need support, feel free to reach out to us!</p>
+            <p>Email: support@nutriplant.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </section>
+
+        <section class="explore-plants">
+            <h2>Explore Plants</h2>
+            <div class="plant-categories">
+                <div class="category">
+                    <img src="plant1.jpg" alt="Plant 1">
+                    <p>Plant Category 1</p>
+                </div>
+                <div class="category">
+                    <img src="plant2.jpg" alt="Plant 2">
+                    <p>Plant Category 2</p>
+                </div>
+                <div class="category">
+                    <img src="plant3.jpg" alt="Plant 3">
+                    <p>Plant Category 3</p>
+                </div>
+                <!-- Add more categories as needed -->
+            </div>
+        </section>
+    </main>
+
+    
+</body>
+</html>

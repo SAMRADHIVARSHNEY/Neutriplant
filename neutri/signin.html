@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In & Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d1e8d1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #558b2f;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #33691e;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .primary-button {
+            background-color: #558b2f;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .primary-button:hover {
+            background-color: #33691e;
+        }
+
+        .secondary-button {
+            background-color: #81c784;
+            color: white;
+        }
+
+        .secondary-button:hover {
+            background-color: #558b2f;
+        }
+
+        .social-buttons {
+            margin: 20px 0;
+        }
+
+        .social-buttons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .social-buttons a:hover {
+            background-color: #f0f4f0;
+        }
+
+        .social-buttons img {
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #558b2f;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 id="form-title">Welcome Back! 👋</h2>
+        <p id="form-subtitle">Let's Continue Your Green Journey</p>
+
+        <form id="user-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password" id="password-label">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div id="additional-field"></div>
+
+            <button type="submit" class="primary-button" id="action-button">Log in</button>
+        </form>
+
+        <p>or</p>
+
+        <div class="social-buttons">
+            <a href="https://accounts.google.com">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google Logo">
+                Continue with Google
+            </a>
+            <a href="https://appleid.apple.com">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo">
+                Continue with Apple
+            </a>
+            <a href="https://www.facebook.com">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/512px-Facebook_icon.svg.png" alt="Facebook Logo">
+                Continue with Facebook
+            </a>
+        </div>
+
+        <p class="footer">
+            <span id="toggle-text">Don't have an account?</span> 
+            <a href="#" id="toggle-form">Sign Up</a>
+        </p>
+    </div>
+
+    <script>
+        const formTitle = document.getElementById('form-title');
+        const formSubtitle = document.getElementById('form-subtitle');
+        const passwordLabel = document.getElementById('password-label');
+        const additionalField = document.getElementById('additional-field');
+        const actionButton = document.getElementById('action-button');
+        const toggleText = document.getElementById('toggle-text');
+        const toggleForm = document.getElementById('toggle-form');
+
+        toggleForm.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            if (actionButton.innerText === 'Log in') {
+                formTitle.innerText = "Let's Create an Account!";
+                formSubtitle.innerText = "Join the Green Journey";
+                passwordLabel.innerText = "Create your password:";
+                actionButton.innerText = "Register";
+                toggleText.innerText = "Already have an account?";
+                toggleForm.innerText = "Sign In";
+
+                const nameField = document.createElement('div');
+                nameField.innerHTML = `
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                `;
+                additionalField.appendChild(nameField);
+            } else {
+                formTitle.innerText = "Welcome Back! 👋";
+                formSubtitle.innerText = "Let's Continue Your Green Journey";
+                passwordLabel.innerText = "Password:";
+                actionButton.innerText = "Log in";
+                toggleText.innerText = "Don't have an account?";
+                toggleForm.innerText = "Sign Up";
+                additionalField.innerHTML = '';
+            }
+        });
+
+        document.getElementById('user-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'maintrial.html';
+        });
+    </script>
+</body>
+</html>

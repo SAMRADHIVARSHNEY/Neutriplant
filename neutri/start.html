@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutriplant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #e9f5e9;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 26px;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+
+        .language-select {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .language-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .language-options button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .language-options button:hover {
+            background-color: #388E3C;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .buttons button {
+            flex: 1;
+            margin: 0 5px;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        .buttons button:last-child {
+            background-color: #6c757d;
+        }
+
+        .buttons button:last-child:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Nutriplant</h1>
+        <img src="https://via.placeholder.com/80" alt="Nutriplant Logo">
+
+        <div class="language-select">
+            <select id="language-dropdown">
+                <option value="english">English</option>
+                <option value="hindi">Hindi</option>
+                <option value="bangla">Bangla</option>
+                <option value="urdu">Urdu</option>
+                <option value="japanese">Japanese</option>
+            </select>
+        </div>
+
+        <div class="language-options">
+            <button onclick="changeLanguage('english')">English</button>
+            <button onclick="changeLanguage('hindi')">Hindi</button>
+            <button onclick="changeLanguage('bangla')">Bangla</button>
+            <button onclick="changeLanguage('urdu')">Urdu</button>
+            <button onclick="changeLanguage('japanese')">Japanese</button>
+        </div>
+
+        <div class="buttons">
+            <button>Register</button>
+            <button>Sign In</button>
+        </div>
+    </div>
+
+    <script>
+        function changeLanguage(language) {
+            console.log('Changing language to:', language);
+        }
+    </script>
+</body>
+</html>

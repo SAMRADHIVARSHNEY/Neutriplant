@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Information</title>
+    <style>
+        /* General Reset */
+        body, h2, ul, li {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTEyL3Jhd3BpeGVsX29mZmljZV80MF9hX21pbmltYWxzbV9pbGx1c3RyYXRpb25fb2Zfc2FnZV9ncmVlbl9sb2ZpX18zMDk0YTgwYi04ZDVhLTQxZGYtYWUxZi1jY2MwMmExZjgyMWYuanBn.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Image Styling */
+        .header-image {
+            width: 100%;
+            max-width: 800px;
+            height: 500px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(58, 58, 58, 0.8); /* Semi-transparent dark grey */
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            text-align: left;
+        }
+
+        /* Section Styling */
+        .plant-info {
+            margin-bottom: 40px;
+        }
+
+        .plant-info h2 {
+            font-size: 2.5em;
+            color: #81c784; /* Light green color for headings */
+            margin-bottom: 15px;
+            border-bottom: 3px solid #81c784;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .plant-info ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .plant-info ul li {
+            font-size: 1.2em;
+            color: #d0d0d0; /* Light grey color for text */
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .plant-info ul li::before {
+            content: '•';
+            color: #81c784;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.5em;
+        }
+
+        /* Hover Effects */
+        .plant-info ul li:hover {
+            color: #81c784;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .plant-info h2 {
+                font-size: 2em;
+            }
+
+            .plant-info ul li {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Image -->
+    <img src="https://thehouseandhomestead.com/wp-content/uploads/2019/06/Herbs-Feature-Photo-2-1.jpg" alt="Plant Image" class="header-image">
+    
+    <div class="container">
+        <section class="plant-info">
+            <h2>Herbs</h2>
+            <ul>
+                <li>Thrive in well-drained soil with regular watering and plenty of sunlight.</li>
+                <li>Often grown for their aromatic leaves, which are used in cooking, medicine, and perfumes.</li>
+                <li>Susceptible to pests like aphids and diseases such as powdery mildew and root rot, requiring good air circulation and careful watering.</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

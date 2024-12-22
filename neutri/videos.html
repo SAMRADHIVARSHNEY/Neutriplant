@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf Detection Project Videos</title>
+    <style>
+        /* General Reset */
+        body, h1, h2 {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e8f5e9; /* Light green background */
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Header Styling */
+        h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #388e3c; /* Darker green for main heading */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #66bb6a; /* Slightly lighter green for subheading */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container Styling */
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Video Frame Styling */
+        .video-frame {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            background-color: #000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-frame iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Hover Effects */
+        .video-frame:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>This page aims at providing knowledge of farming-related things to our users. Videos are both available in English and Hindi. The main aim of this page is to provide information about how to improve soil quality.</h1>
+    
+    <h2>English Videos</h2>
+    <div class="video-container">
+        <!-- Video 1 -->
+        <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/L14woJZEJnk?si=SyxUHE1QzWA6NWlP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/eIVO444M4kM?si=GD9NxcpLPez4Zam3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/bV76d4xmXjE?si=jaXS_9F6mQkRuIEE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/xFqecEtdGZ0?si=OcS6PgbMi7HDP4Jw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/YN7nUHkvxwo?si=A71NKfInzoOl-FPp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/7-Tyz7fGeZo?si=eAKFp8D14n9gD9-P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <br>
+
+    <h2>Hindi Videos</h2> 
+    <div class="video-container">
+        <!-- Video 1 -->
+        <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/zbgU0_PhyIk?si=irVhkRZC9tBhE4D4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/MZJpxE6NIwA?si=bxISHTgPM3Zxme-d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/mDIVpJgjoXQ?si=rkkG5EfygpF_eqhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/0eiq_HXWs8M?si=kOpJNFp1Ydo4iExh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/e4_BHgSmcSY?si=zY9_CueTo2R2sCzT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/C8VS_XlfWVA?si=b79MQVUdlYC_SzNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>

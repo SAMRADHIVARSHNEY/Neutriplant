@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Information</title>
+    <style>
+        /* General Reset */
+        body, h2, ul, li {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTEyL3Jhd3BpeGVsX29mZmljZV80MF9hX21pbmltYWxzbV9pbGx1c3RyYXRpb25fb2Zfc2FnZV9ncmVlbl9sb2ZpX18zMDk0YTgwYi04ZDVhLTQxZGYtYWUxZi1jY2MwMmExZjgyMWYuanBn.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Image Styling */
+        .header-image {
+            width: 100%;
+            max-width: 800px;
+            height: 500px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(58, 58, 58, 0.85); /* Semi-transparent dark grey */
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            text-align: left;
+        }
+
+        /* Section Styling */
+        .plant-info {
+            margin-bottom: 40px;
+        }
+
+        .plant-info h2 {
+            font-size: 2.5em;
+            color: #81c784; /* Light green color for headings */
+            margin-bottom: 15px;
+            border-bottom: 3px solid #81c784;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .plant-info h3 {
+            font-size: 1.8em;
+            color: #aed581; /* Slightly lighter green for subheadings */
+            margin-bottom: 10px;
+            border-bottom: 2px solid #aed581;
+            display: inline-block;
+            padding-bottom: 3px;
+        }
+
+        .plant-info ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .plant-info ul li {
+            font-size: 1.2em;
+            color: #d0d0d0; /* Light grey color for text */
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .plant-info ul li::before {
+            content: '•';
+            color: #81c784;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.5em;
+        }
+
+        /* Hover Effects */
+        .plant-info ul li:hover {
+            color: #81c784;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .plant-info h2 {
+                font-size: 2em;
+            }
+
+            .plant-info h3 {
+                font-size: 1.5em;
+            }
+
+            .plant-info ul li {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Image -->
+    <img src="https://www.bigblogofgardening.com/wp-content/uploads/2020/11/weeds-growing-on-top-of-landscape-fabric-1500x860-1.jpg" alt="Plant Image" class="header-image">
+    
+    <div class="container">
+        <!-- Weeds Section -->
+        <section class="plant-info">
+            <h2>Weeds</h2>
+            
+            <h3>Advantages in Our Environment:</h3>
+            <ul>
+                <li>Erosion Control: Many weeds have deep root systems that help stabilize soil and prevent erosion, especially on slopes and bare ground.</li>
+                <li>Biodiversity: Weeds provide habitat and food for various insects and animals, contributing to local biodiversity.</li>
+                <li>Soil Health: Certain weeds, like clover, can fix nitrogen in the soil, enhancing its fertility.</li>
+            </ul>
+
+            <h3>Common Diseases:</h3>
+            <ul>
+                <li>Powdery Mildew: Characterized by a white, powdery substance on leaves and stems.</li>
+                <li>Rust Fungi: Causes reddish-brown pustules on leaves and stems.</li>
+                <li>Downy Mildew: Appears as yellow patches on the upper side of leaves, with a grayish mold on the underside.</li>
+            </ul>
+
+            <h3>Cures for Diseases:</h3>
+            <ul>
+                <li>Powdery Mildew: Use fungicides and ensure good air circulation around plants. Avoid overhead watering.</li>
+                <li>Rust Fungi: Remove and destroy infected plant parts. Apply appropriate fungicides.</li>
+                <li>Downy Mildew: Improve airflow around plants, avoid wetting foliage, and use resistant plant varieties.</li>
+            </ul>
+        </section>
+
+        <!-- Shrubs Section -->
+        <section class="plant-info">
+            <h2>Shrubs</h2>
+
+            <h3>Advantages in Our Environment:</h3>
+            <ul>
+                <li>Habitat Creation: Shrubs provide shelter and nesting sites for wildlife, including birds and insects.</li>
+                <li>Privacy Screening: They can be used as natural barriers to block views and reduce noise.</li>
+                <li>Soil Stabilization: Shrubs help prevent soil erosion with their extensive root systems.</li>
+            </ul>
+
+            <h3>Care Requirements:</h3>
+            <ul>
+                <li>Soil Needs: Shrubs require well-drained soil and consistent moisture to thrive.</li>
+                <li>Pruning: Regular pruning is essential to maintain their shape, remove dead or diseased wood, and encourage healthy growth.</li>
+                <li>Ornamental Value: Shrubs provide aesthetic appeal to landscapes but need proper care to remain healthy and attractive.</li>
+            </ul>
+
+            <h3>Common Diseases:</h3>
+            <ul>
+                <li>Fungal Diseases: Can cause leaf spots, powdery mildew, and root rot.</li>
+                <li>Bacterial Diseases: May lead to leaf blight and cankers.</li>
+                <li>Viral Diseases: Often cause deformed leaves and stunted growth.</li>
+            </ul>
+
+            <h3>Cures for Diseases:</h3>
+            <ul>
+                <li>Fungal Diseases: Use fungicides, ensure good air circulation, and avoid overhead watering.</li>
+                <li>Bacterial Diseases: Remove and destroy infected plant parts and avoid overhead watering.</li>
+                <li>Viral Diseases: Remove infected plants to prevent spread and control insect vectors that transmit viruses.</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
